@@ -1,0 +1,11 @@
+
+#Añadimos los archivos que no queremos que se incluyan en la contruccion de la imagen cuando llamamos al copy
+
+.git
+.vscode
+#personaliza lo que hacemos cada uno 
+.vs
+#lo quitamos porque nos evitan problemas de compilacion(esta cambiando constantemente)
+**/bin
+**/obj
+

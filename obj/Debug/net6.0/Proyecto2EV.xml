@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Proyecto2EV</name>
+    </assembly>
+    <members>
+        <member name="M:Classes.OrderController.Get">
+            <summary>
+            Mostrar todas las promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="200">Devuelve el listado de promociones</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.OrderController.GetByUserId(System.Int32)">
+            <summary>
+            Buscar por id
+            </summary>
+            <returns>Todas las promociones con el mismo id</returns>
+            <response code="200">Devuelve el listado de promociones con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.OrderController.Post(Classes.OrderPro)">
+            <summary>
+            añadir promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="201">Se ha creado correctamente</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Get">
+            <summary>
+            Mostrar todas las promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="200">Devuelve el listado de promociones</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Get(System.Int32)">
+            <summary>
+            Buscar por id
+            </summary>
+            <returns>Todas las promociones con el mismo id</returns>
+            <response code="200">Devuelve el listado de promociones con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Get(System.String)">
+            <summary>
+            Buscar por nombre
+            </summary>
+            <returns>Todos los grados con el mismo nombre</returns>
+            <response code="200">Devuelve el listado de grados</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Post(Classes.Promocion)">
+            <summary>
+            añadir promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="201">Se ha creado correctamente</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Update(Classes.Promocion,System.Int32)">
+             <summary>
+            Actualizar las promociones
+             </summary>
+             <returns>Todas las promociones</returns>
+             <response code="201">Devuelve el listado de grados</response>
+             <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.PromocionController.Delete(System.Int32)">
+            <summary>
+            Eliminar grados seleccionados
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="200">Se ha eliminado</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Get">
+            <summary>
+            Mostrar todos los gasoleos
+            </summary>
+            <returns>Todos los gasoleos</returns>
+            <response code="200">Devuelve el listado de gasoleo</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Get(System.Boolean)">
+            <summary>
+            Mostrar  los gasoleos con este id
+            </summary>
+            <returns>Todos los gasoleos con este id</returns>
+            <response code="200">Devuelve el listado de gasoleos con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Get(System.String)">
+            <summary>
+            Mostrar  los gasoleos con este id
+            </summary>
+            <returns>Todos los gasoleos con este id</returns>
+            <response code="200">Devuelve el listado de gasoleos con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Post(Classes.TipoGasoleo)">
+            <summary>
+            añadir gasoleos
+            </summary>
+            <returns>Todos los gasoleos</returns>
+            <response code="201">Se ha creado correctamente</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Update(Classes.TipoGasoleo,System.Int32)">
+             <summary>
+            Actualizar los gasoleos
+             </summary>
+             <returns>Todos los gasoleos</returns>
+             <response code="201">Devuelve el listado de gasoleos</response>
+             <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.GasoleoController.Delete(System.Int32)">
+            <summary>
+            Eliminar gasoleos seleccionados
+            </summary>
+            <returns>Todos los gasoleos</returns>
+            <response code="200">Se ha eliminado</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Get">
+            <summary>
+            Mostrar todos los usuarios
+            </summary>
+            <returns>Todos los usuaruos</returns>
+            <response code="200">Devuelve el listado de usuarios</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Get(System.String,System.Boolean)">
+            <summary>
+            Buscar por nombre 
+            </summary>
+            <returns>nombre de  usuario</returns>
+            <response code="200">Devuelve el listado de usuarios con el mismo nombre</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Get(System.Int32)">
+            <summary>
+            Buscar usuarios por ID
+            </summary>
+            <returns>el usuario con este id</returns>
+            <response code="200">Devuelve el listado de usuarios con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Post(Classes.User)">
+            <summary>
+            añadir usuarios
+            </summary>
+            <returns>Todos los usuarios</returns>
+            <response code="201">Se ha creado correctamente</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Update(Classes.User,System.Int32)">
+             <summary>
+            Actualizar los usurarios
+             </summary>
+             <returns>Todos los usuarios</returns>
+             <response code="201">Devuelve el listado de usuarios</response>
+             <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.UsersController.Delete(System.Int32)">
+            <summary>
+            Eliminar usuarios seleccionados
+            </summary>
+            <returns>Todos los usuarios</returns>
+            <response code="200">Se ha eliminado</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+    </members>
+</doc>
