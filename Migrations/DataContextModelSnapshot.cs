@@ -46,6 +46,9 @@ namespace Proyecto2EV.Migrations
                     b.Property<decimal>("descuento")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("idUser")
+                        .HasColumnType("int");
+
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -103,9 +106,6 @@ namespace Proyecto2EV.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
-
-                    b.Property<int>("birth")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("dateInscription")
                         .HasColumnType("datetime2");

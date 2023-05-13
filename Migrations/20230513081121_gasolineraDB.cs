@@ -38,7 +38,6 @@ namespace Proyecto2EV.Migrations
                     email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     gender = table.Column<bool>(type: "bit", nullable: false),
                     dateInscription = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    birth = table.Column<int>(type: "int", nullable: false),
                     puntosAcumulados = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
@@ -59,6 +58,7 @@ namespace Proyecto2EV.Migrations
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     descuento = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     cantidadPersonas = table.Column<int>(type: "int", nullable: false),
+                    idUser = table.Column<int>(type: "int", nullable: false),
                     Userid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

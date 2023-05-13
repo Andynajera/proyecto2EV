@@ -54,6 +54,22 @@ public class GasoleoController : ControllerBase
             : Ok(tipoGasoleo);
     }
     /// <summary>
+    /// Mostrar  los gasoleos con este id
+    /// </summary>
+    /// <returns>Todos los gasoleos con este id</returns>
+    /// <response code="200">Devuelve el listado de gasoleos con este id</response>
+    /// <response code="500">Si hay algún error</response>
+        [HttpGet]
+    [Route("name")]
+    public ActionResult<TipoGasoleo> Get(string name)
+    {
+        List<TipoGasoleo> gasoleo = _context.TipoGasoleos.Where(x => x.name.Contains(name)).OrderByDescending(x => x.name).ToList();
+        //buscar por nombre   
+        return gasoleo == null ? NotFound()
+
+            : Ok(gasoleo);
+    }
+    /// <summary>
     /// añadir gasoleos
     /// </summary>
     /// <returns>Todos los gasoleos</returns>

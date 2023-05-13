@@ -131,7 +131,6 @@ public class UsersController : ControllerBase
         userToUpdate.password=user.password;
         userToUpdate.gender=user.gender;
         userToUpdate.dateInscription=user.dateInscription;
-        userToUpdate.birth=user.birth;
          userToUpdate.puntosAcumulados=user.puntosAcumulados;
 
         _context.SaveChanges();

@@ -68,6 +68,14 @@
             <response code="200">Devuelve el listado de gasoleos con este id</response>
             <response code="500">Si hay algún error</response>
         </member>
+        <member name="M:Classes.GasoleoController.Get(System.String)">
+            <summary>
+            Mostrar  los gasoleos con este id
+            </summary>
+            <returns>Todos los gasoleos con este id</returns>
+            <response code="200">Devuelve el listado de gasoleos con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
         <member name="M:Classes.GasoleoController.Post(Classes.TipoGasoleo)">
             <summary>
             añadir gasoleos

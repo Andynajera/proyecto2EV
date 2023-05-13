@@ -66,6 +66,16 @@ public class PromocionController : ControllerBase
 
             : Ok(promocion);
     }
+        [HttpGet]
+    [Route("vigor")] 
+    public ActionResult<TipoGasoleo> Get(bool vigor)
+    {
+        
+  List<Promocion> promociones =_context.Promociones.Where(x=> x.vigor == vigor).ToList();
+        //buscar por bool   
+        return promociones == null? NotFound()
+            : Ok(promociones);
+    }
     /// <summary>
     /// añadir promociones
     /// </summary>
