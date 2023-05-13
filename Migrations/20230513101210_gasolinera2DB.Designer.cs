@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Proyecto2EV.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230513081121_gasolineraDB")]
-    partial class gasolineraDB
+    [Migration("20230513101210_gasolinera2DB")]
+    partial class gasolinera2DB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace Proyecto2EV.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Classes.Promocion", b =>
+            modelBuilder.Entity("Classes.OrderPro", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -32,8 +32,24 @@ namespace Proyecto2EV.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
-                    b.Property<int?>("Userid")
+                    b.Property<int>("PromocionId")
                         .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("OrderPros");
+                });
+
+            modelBuilder.Entity("Classes.Promocion", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
                     b.Property<int>("cantidadPersonas")
                         .HasColumnType("int");
@@ -48,9 +64,6 @@ namespace Proyecto2EV.Migrations
                     b.Property<decimal>("descuento")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("idUser")
-                        .HasColumnType("int");
-
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -62,8 +75,6 @@ namespace Proyecto2EV.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("id");
-
-                    b.HasIndex("Userid");
 
                     b.ToTable("Promociones");
                 });
@@ -130,18 +141,6 @@ namespace Proyecto2EV.Migrations
                     b.HasKey("id");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("Classes.Promocion", b =>
-                {
-                    b.HasOne("Classes.User", null)
-                        .WithMany("Promociones")
-                        .HasForeignKey("Userid");
-                });
-
-            modelBuilder.Entity("Classes.User", b =>
-                {
-                    b.Navigation("Promociones");
                 });
 #pragma warning restore 612, 618
         }

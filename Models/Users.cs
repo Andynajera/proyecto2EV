@@ -13,7 +13,6 @@ namespace Classes;
     public bool gender {get;set;}
     public DateTime  dateInscription {get;set;}
     public decimal puntosAcumulados {get;set;}
-    public virtual ICollection<Promocion>? Promociones{get;set;}
 
 
  /*   

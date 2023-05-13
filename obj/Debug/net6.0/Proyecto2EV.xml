@@ -4,6 +4,30 @@
         <name>Proyecto2EV</name>
     </assembly>
     <members>
+        <member name="M:Classes.OrderController.Get">
+            <summary>
+            Mostrar todas las promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="200">Devuelve el listado de promociones</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.OrderController.GetByUserId(System.Int32)">
+            <summary>
+            Buscar por id
+            </summary>
+            <returns>Todas las promociones con el mismo id</returns>
+            <response code="200">Devuelve el listado de promociones con este id</response>
+            <response code="500">Si hay algún error</response>
+        </member>
+        <member name="M:Classes.OrderController.Post(Classes.OrderPro)">
+            <summary>
+            añadir promociones
+            </summary>
+            <returns>Todas las promociones</returns>
+            <response code="201">Se ha creado correctamente</response>
+            <response code="500">Si hay algún error</response>
+        </member>
         <member name="M:Classes.PromocionController.Get">
             <summary>
             Mostrar todas las promociones

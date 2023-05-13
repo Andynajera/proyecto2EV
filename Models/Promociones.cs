@@ -12,7 +12,6 @@ namespace Classes;
 
     public decimal descuento { get;set; }
     public int cantidadPersonas { get;set; }
-    public User? user { get;set; }
     
 /*
 //Contructor

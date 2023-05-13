@@ -145,21 +145,36 @@ public class UsersController : ControllerBase
     /// <returns>Todos los usuarios</returns>
     /// <response code="200">Se ha eliminado</response>
     /// <response code="500">Si hay algún error</response>
-        [HttpDelete ("{id:int}" )]
+        [HttpDelete ]
+         [Route("{id}")]
     public  ActionResult Delete (int id)
     {
-        User userToDelete = _context.User.Find(id);
-        if (userToDelete == null)
+        if (id == null)
         {
-            return NotFound("menu no encontrado");
+            return BadRequest();
         }
-        _context.User.Remove(userToDelete);
-        _context.SaveChanges();
-         if (userToDelete == null)
+        else
         {
-            return NotFound();
+            User userToDelete = _context.User.Find(id);
+            if (userToDelete == null)
+            {
+                return NotFound("menu no encontrado");
+            }
+            _context.User.Remove(userToDelete);
+             _context.SaveChanges();
+            var orders = _context.OrderPros.ToList();
+            orders.ForEach(o =>
+            {
+                if (o.UserId == id)
+                {
+                    _context.OrderPros.Remove(o);
+                }
+                _context.SaveChanges();
+                
+            });
+            return Ok();
+
         }
-        return Ok(userToDelete);
-    }
+        }
 
 }

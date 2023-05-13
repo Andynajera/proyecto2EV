@@ -14,6 +14,7 @@ namespace Data
         public DbSet<User>? User { get; set; }
         public DbSet<TipoGasoleo>? TipoGasoleos { get; set; }
         public DbSet<Promocion>? Promociones { get; set; }
+        public DbSet<OrderPro>? OrderPros { get; set; }
         
     }
 }
